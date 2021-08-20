@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <title>Bildergalerie</title>
+    <link rel="stylesheet" type="text/css" href="dist/style.css">
+
+</head>
+<body>
+    <h1>Eine Bildergalerie von Moni und Nelli</h1>
+    <p class="special">Viel Spaß beim Anschauen!</p>
+
+    <div class="row">
+        <div class="column">
+
+          <img src="/dist/Moni3..JPG" 
+           width="50" 
+           height="40"
+           alt="Mittagsschlaf am Fenster" onclick="myFunction(this);">
+            </div>
+        <div class="column">
+          <img src="/dist/Nelli3.JPG" 
+          width="50" 
+          height="40"
+          alt="Wenn Tüte, dann Katze" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="/dist/Moni4..JPG" 
+          width="50" 
+          height="40"
+          alt="Träumen" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="/dist/Nelli4.JPG" 
+          width="50" 
+          height="40"
+          alt="Schlafen in der Sonne" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="/dist/Moni5.JPG" 
+            width="30" 
+            height="40"
+            alt="Stör ich dich?" onclick="myFunction(this);">
+          </div>
+          <div class="column">
+            <img src="/dist/Nelli5.JPG" 
+            width="50" 
+            height="40"
+            alt="Fellball" onclick="myFunction(this);">
+          </div>
+          <div class="column">
+            <img src="/dist/Moni6.JPG" 
+            width="50" 
+            height="40"
+            alt="Kuscheln ist am Schönsten" onclick="myFunction(this);">
+          </div>
+          <div class="column">
+            <img src="/dist/Nelli6.JPG" 
+            width="50" 
+            height="40"
+            alt="Perfekt in Position" onclick="myFunction(this);">
+          </div>
+      </div>
+      
+      <!-- The expanding image container -->
+      <div class="container">
+        <!-- Close the image -->
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      
+        <!-- Expanded image -->
+        <img id="expandedImg" style="width:100%">
+      
+        <!-- Image text -->
+        <div id="imgtext"></div>
+      </div>
+      <br />
+      <br />
+    <p class="special">Hier geht es zurück zur <a class="link" href="/">Startseite.</a></p>
+
+    <script>
+        function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+} 
+    </script>
+
+
+
+</body>
+</html>
